@@ -34,4 +34,25 @@ Manual Testing Workflow:
 
 Automation Testing Workflow:
 
-        1. 
+        1. Create a seperate branch for the user story
+
+        2. work on features folder:
+                add the scenarios into the feature file
+
+        3. work on the steps folder:
+                Generating step definitions
+                work on the body of the step definitions 
+                (any web element or page actions, we create them under the pages)
+
+        4. Run the test and review the report:
+                Determines the result of pass or failed
+                
+                If Passed ==> go to step 5
+
+                If Failed (Do not Go to Step5):
+                        RCA (Root Cause Analysis)
+                        Determine why test is failed
+                        Analyze if its faied due to the product defect that I should be reporting of.
+
+        5. Push to the github feature branch, create PR 
+        
