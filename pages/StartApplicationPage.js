@@ -101,9 +101,9 @@ export class StartApplicationPage extends BasePage {
       "//div[@class='col-sm']/b[@class = 'info-primary']"
     );
 
-    this.footer = page.locator(
-      "//p[@class = 'footer-text' and contains(text(), 'Need help?')]"
-    );
+    this.footer = page
+      .locator(".right-footer .footer-text:visible")
+      .filter({ hasText: "Need help? Contact us at" });
 
     this.nextButton = page.locator(
       "//button[@class = 'next-button'][contains(text(), 'Next')]"
