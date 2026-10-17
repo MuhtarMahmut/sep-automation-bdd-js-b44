@@ -34,6 +34,7 @@ export class StartApplicationPage extends BasePage {
     this.howDidYouHearAboutUsDropDown = page.locator(
       "//mat-label[text()='How did you hear about us?']"
     );
+    this.howDidYouHearAboutUsOptions = page.getByRole("option");
 
     this.emailOptionFromDropDown = page.locator(
       "//mat-option/span[contains(text(), 'Email')]"
