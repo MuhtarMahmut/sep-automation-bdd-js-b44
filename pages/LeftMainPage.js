@@ -21,5 +21,18 @@ export class LeftMainPage extends BasePage {
     
   }
 
-  
+  async isLogoBeforeTermsAndConditions() {
+    return this.cydeoImageAtLeftWindow.evaluate((logo) => {
+      const termsLink = Array.from(document.querySelectorAll("a")).find(
+        (link) =>
+          link.textContent.trim().toLowerCase() === "terms and conditions"
+      );
+      return Boolean(
+        termsLink &&
+          (logo.compareDocumentPosition(termsLink) &
+            Node.DOCUMENT_POSITION_FOLLOWING)
+      );
+    });
+  }
+
 }
