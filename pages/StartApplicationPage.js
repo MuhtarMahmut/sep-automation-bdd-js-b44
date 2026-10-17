@@ -97,6 +97,8 @@ export class StartApplicationPage extends BasePage {
       "//p[@class='program-title primary-color']"
     );
 
+    this.returnPolicyText = page.getByText(/return policy|refund policy/i);
+
     this.programPrice = page.locator(
       "//div[@class='col-sm']/b[@class = 'info-primary']"
     );
