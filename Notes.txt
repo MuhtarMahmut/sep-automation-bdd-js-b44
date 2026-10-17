@@ -1,4 +1,5 @@
 Agents: A specialist role with behavior and allowed tools
+        Agent can not re-run itself
 
 Skills: Reusable task instructions
 
